@@ -49,11 +49,11 @@ function App() {
     return () => clearInterval(timer);
   }, []);
   return (
-    <main className="relative min-h-screen w-full overflow-x-hidden bg-[#050505] text-white">
+    <main className="min-h-screen overflow-hidden bg-[#050505] text-white">
       {/* Ambient background */}
-      <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-[-20%] h-[320px] w-[320px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[140px] sm:h-[600px] sm:w-[600px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] h-[280px] w-[280px] rounded-full bg-orange-500/10 blur-[140px] sm:h-[500px] sm:w-[500px]" />
+      <div className="pointer-events-none fixed inset-0">
+        <div className="absolute left-1/2 top-[-20%] h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[140px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[140px]" />
 
         <div
           className="absolute inset-0 opacity-[0.035]"
@@ -154,8 +154,8 @@ function App() {
 
 
       {/* Hero */}
-      <section className="relative z-10 flex min-h-[calc(100vh-88px)] items-center overflow-hidden px-6 pb-16 pt-4 md:px-12 lg:px-16">
-        <div className="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="relative z-10 flex min-h-[calc(100vh-88px)] items-center px-6 pb-16 md:px-12 lg:px-16">
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -173,76 +173,76 @@ function App() {
               A new mission begins
             </p>
 
-            <h1 className="max-w-4xl text-5xl font-black uppercase leading-[0.88] tracking-[-0.05em] sm:text-7xl md:text-8xl lg:text-[9rem]">
+            <h1 className="max-w-4xl text-7xl font-black uppercase leading-[0.82] tracking-[-0.06em] sm:text-8xl lg:text-[9rem]">
               <span className="block text-white">ASSEMBLE</span>
               <span className="block bg-gradient-to-r from-red-500 via-orange-400 to-red-600 bg-clip-text text-transparent">
                 NOW.
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-sm leading-6 text-white/50 sm:mt-8 sm:text-base md:text-lg">
+            <p className="mt-8 max-w-xl text-base leading-7 text-white/50 md:text-lg">
               Step into the next generation of technology, creativity and
               innovation. Your mission starts here.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
+            <div className="mt-9 flex flex-wrap gap-4">
               <a
-                href="#mission"
-                className="group flex items-center justify-center gap-3 bg-red-600 px-6 py-3.5 text-xs font-bold uppercase tracking-[0.15em] transition hover:bg-red-500 sm:px-7 sm:py-4 sm:text-sm"
-              >
-                Enter the Mission
-                <ArrowRight
-                  size={17}
-                  className="transition-transform group-hover:translate-x-1"
-                />
-              </a>
-              <a
-                href="#heroes"
-                className="flex items-center justify-center gap-3 border border-white/15 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.15em] text-white/60 transition hover:border-white/40 hover:text-white sm:px-7 sm:py-4 sm:text-sm"
-              >
-                Explore Event
-              </a>
+  href="#mission"
+  className="group flex items-center gap-3 bg-red-600 px-7 py-4 text-sm font-bold uppercase tracking-[0.15em] transition hover:bg-red-500"
+>
+  Enter the Mission
+  <ArrowRight
+    size={17}
+    className="transition-transform group-hover:translate-x-1"
+  />
+</a>
+<a
+ href="#heroes"
+  className="flex items-center gap-3 border border-white/15 px-7 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white/60 transition hover:border-white/40 hover:text-white"
+>
+  Explore Event
+</a>
             </div>
           </motion.div>
-          {/* Spider-Man swing */}
-          <motion.div
-            initial={{
-              x: 320,
-              y: -140,
-              rotate: 18,
-              opacity: 0,
-            }}
-            animate={{
-              x: [320, 220, 80, -30, -160, -320],
-              y: [-140, -60, 20, 60, 110, 180],
-              rotate: [18, 28, 8, -12, -28, -18],
-              opacity: [0, 1, 1, 1, 1, 0],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              repeatDelay: 2,
-              ease: "easeInOut",
-              times: [0, 0.18, 0.38, 0.58, 0.8, 1],
-            }}
-            className="pointer-events-none absolute right-[-20px] top-[-60px] z-30 hidden sm:block"
-            style={{
-              transformOrigin: "50% 0%",
-            }}
-          >
-            <img
-              src="/spiderman.png"
-              alt=""
-              className="w-[140px] md:w-[210px] object-contain drop-shadow-[0_0_20px_rgba(239,68,68,0.45)]"
-            />
-          </motion.div>
+{/* Spider-Man swing */}
+<motion.div
+  initial={{
+    x: 420,
+    y: -180,
+    rotate: 18,
+    opacity: 0,
+  }}
+  animate={{
+    x: [420, 300, 140, -40, -220, -420],
+    y: [-180, -80, 20, 80, 130, 220],
+    rotate: [18, 28, 8, -12, -28, -18],
+    opacity: [0, 1, 1, 1, 1, 0],
+  }}
+  transition={{
+    duration: 5,
+    repeat: Infinity,
+    repeatDelay: 2,
+    ease: "easeInOut",
+    times: [0, 0.18, 0.38, 0.58, 0.8, 1],
+  }}
+  className="pointer-events-none absolute right-[-40px] top-[-80px] z-30"
+  style={{
+    transformOrigin: "50% 0%",
+  }}
+>
+  <img
+    src="/spiderman.png"
+    alt=""
+    className="w-[210px] object-contain drop-shadow-[0_0_20px_rgba(239,68,68,0.45)]"
+  />
+</motion.div>
 
           {/* Right visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
-            className="relative mx-auto aspect-square w-full max-w-[280px] sm:max-w-[420px] md:max-w-[520px]"
+            className="relative mx-auto aspect-square w-full max-w-[520px]"
           >
             {/* Outer rings */}
             <motion.div
@@ -344,9 +344,9 @@ function App() {
 
       {/* Mission Brief */}
       <section
-        id="mission"
-        className="relative z-10 overflow-hidden border-t border-white/10 bg-[#080808] px-6 py-20 md:px-12 md:py-24 lg:px-16"
-      >
+  id="mission"
+  className="relative z-10 border-t border-white/10 bg-[#080808] px-6 py-24 md:px-12 lg:px-16"
+>
         <div className="mx-auto max-w-7xl">
           {/* Section heading */}
           <motion.div
@@ -363,7 +363,7 @@ function App() {
             </div>
 
             <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
-              <h2 className="text-4xl font-black uppercase leading-[0.9] tracking-[-0.05em] sm:text-6xl md:text-7xl">
+              <h2 className="text-5xl font-black uppercase leading-[0.9] tracking-[-0.05em] sm:text-6xl md:text-7xl">
                 THE
                 <br />
                 <span className="text-white/25">MISSION</span>
@@ -496,32 +496,53 @@ function App() {
           </div>
         </div>
       </section>
-      {/* Heroes Section */}
-      <section
-        id="heroes"
-        className="relative overflow-hidden border-t border-white/10 bg-[#050505] px-6 py-20 md:px-12 md:py-28 lg:px-16"
-      >
-        {/* Big Faded Arc Reactor - contained inside overflow-hidden */}
-        <motion.div
-          animate={{
-            scale: [1, 1.03, 1],
-            opacity: [0.08, 0.14, 0.08],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 sm:h-[500px] sm:w-[500px] md:h-[750px] md:w-[750px] lg:h-[950px] lg:w-[950px]"
-        >
-          <img
-            src="/arc-reactor.gif"
-            alt=""
-            className="h-full w-full object-contain"
-          />
-        </motion.div>
+      {/* Big Faded Arc Reactor */}
+<motion.div
+  animate={{
+    scale: [1, 1.03, 1],
+    opacity: [0.10, 0.16, 0.10],
+  }}
+  transition={{
+    duration: 4,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/2 md:h-[850px] md:w-[850px] lg:h-[1000px] lg:w-[1000px]"
+>
+  <img
+    src="/arc-reactor.gif"
+    alt=""
+    className="h-full w-full object-contain"
+  />
+</motion.div>
 
-        <div className="relative z-10 mx-auto max-w-7xl">
+            {/* Heroes Section */}
+      <section
+      id="heroes"
+      className="relative overflow-hidden border-t border-white/10 bg-[#050505] px-6 py-28 md:px-12 lg:px-16"
+      >
+  {/* Big Faded Arc Reactor */}
+  <motion.div
+    animate={{
+      scale: [1, 1.03, 1],
+      opacity: [0.10, 0.16, 0.10],
+    }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/2 md:h-[850px] md:w-[850px] lg:h-[1000px] lg:w-[1000px]"
+  >
+    <img
+      src="/arc-reactor.gif"
+      alt=""
+      className="h-full w-full object-contain"
+    />
+  </motion.div>
+
+  <div className="relative z-10 mx-auto max-w-7xl"></div>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -537,7 +558,7 @@ function App() {
             </div>
 
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-              <h2 className="max-w-3xl text-4xl font-black uppercase leading-[0.9] tracking-[-0.05em] sm:text-6xl md:text-7xl">
+              <h2 className="max-w-3xl text-5xl font-black uppercase leading-[0.9] tracking-[-0.05em] sm:text-6xl md:text-7xl">
                 EVERY
                 <br />
                 <span className="text-white/25">HERO</span>
@@ -647,22 +668,21 @@ function App() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
-      {/* Countdown + Registration */}
+          {/* Countdown + Registration */}
       <section
-        id="register"
-        className="relative z-10 overflow-hidden border-t border-white/10 bg-[#080808] px-6 py-20 md:px-12 md:py-28 lg:px-16"
-      >
+      id="register"
+      className="relative z-10 overflow-hidden border-t border-white/10 bg-[#080808] px-6 py-28 md:px-12 lg:px-16">
         <div className="mx-auto max-w-7xl">
+
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="mb-12 sm:mb-16"
+            className="mb-16"
           >
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-red-500" />
@@ -671,7 +691,7 @@ function App() {
               </span>
             </div>
 
-            <h2 className="max-w-4xl text-4xl font-black uppercase leading-[0.9] tracking-[-0.05em] sm:text-6xl md:text-8xl">
+            <h2 className="max-w-4xl text-5xl font-black uppercase leading-[0.9] tracking-[-0.05em] sm:text-6xl md:text-8xl">
               TIME IS
               <br />
               <span className="text-red-500">RUNNING OUT.</span>
@@ -679,22 +699,22 @@ function App() {
           </motion.div>
 
           {/* Countdown */}
-          <div className="grid grid-cols-2 border border-white/10 sm:grid-cols-4 sm:border-x-0">
+          <div className="grid border-y border-white/10 sm:grid-cols-4">
             {[
-              { value: timeLeft.days, label: "DAYS" },
-              { value: timeLeft.hours, label: "HOURS" },
-              { value: timeLeft.minutes, label: "MINUTES" },
-              { value: timeLeft.seconds, label: "SECONDS" },
-            ].map((item, index) => (
+  { value: timeLeft.days, label: "DAYS" },
+  { value: timeLeft.hours, label: "HOURS" },
+  { value: timeLeft.minutes, label: "MINUTES" },
+  { value: timeLeft.seconds, label: "SECONDS" },
+].map((item, index) => (
               <motion.div
                 key={item.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="border-b border-r border-white/10 p-5 text-center last:border-b-0 sm:border-b-0 sm:last:border-r-0 sm:text-left md:px-8 md:py-12 [&:nth-child(2)]:border-r-0 sm:[&:nth-child(2)]:border-r [&:nth-child(3)]:border-b-0"
+                className="border-b border-white/10 px-5 py-8 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0 md:px-8 md:py-12"
               >
-                <p className="text-4xl font-black tracking-[-0.05em] sm:text-6xl md:text-7xl">
+                <p className="text-5xl font-black tracking-[-0.05em] sm:text-6xl md:text-7xl">
                   {String(item.value).padStart(2, "0")}
                 </p>
 
@@ -706,19 +726,21 @@ function App() {
           </div>
 
           {/* Registration block */}
-          <div className="relative mt-14 overflow-hidden border border-red-500/30 bg-gradient-to-br from-red-950/30 via-[#090909] to-orange-950/10 p-6 sm:mt-20 sm:p-10 md:p-14 lg:p-20">
+          <div className="relative mt-20 overflow-hidden border border-red-500/30 bg-gradient-to-br from-red-950/30 via-[#090909] to-orange-950/10 p-8 md:p-14 lg:p-20">
+
             {/* Decorative circles */}
             <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full border border-red-500/10" />
             <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full border border-red-500/10" />
             <div className="pointer-events-none absolute right-[-5%] top-[10%] h-32 w-32 rounded-full bg-red-600/10 blur-3xl" />
 
-            <div className="relative z-10 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+            <div className="relative z-10 flex flex-col justify-between gap-10 lg:flex-row lg:items-end">
+
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-red-400">
                   Final transmission
                 </p>
 
-                <h3 className="mt-5 max-w-3xl text-4xl font-black uppercase leading-[0.9] tracking-[-0.05em] sm:text-6xl md:text-8xl">
+                <h3 className="mt-5 max-w-3xl text-5xl font-black uppercase leading-[0.9] tracking-[-0.05em] sm:text-6xl md:text-8xl">
                   ARE YOU
                   <br />
                   READY TO
@@ -726,7 +748,7 @@ function App() {
                   <span className="text-red-500">ASSEMBLE?</span>
                 </h3>
 
-                <p className="mt-6 max-w-lg text-sm leading-6 text-white/40">
+                <p className="mt-7 max-w-lg text-sm leading-6 text-white/40">
                   The mission is waiting. Gather your team, prepare your
                   skills and secure your place before the countdown reaches
                   zero.
@@ -734,21 +756,24 @@ function App() {
               </div>
 
               <motion.a
-                href="#register"
+  href="#register"
                 whileHover={{
                   scale: 1.04,
                   boxShadow: "0 0 50px rgba(239,68,68,0.25)",
                 }}
                 whileTap={{ scale: 0.97 }}
-                className="group flex shrink-0 items-center justify-center gap-4 bg-red-600 px-7 py-4 text-xs font-black uppercase tracking-[0.18em] transition hover:bg-red-500 sm:px-8 sm:py-5 sm:text-sm md:px-10"
+                className="group flex shrink-0 items-center justify-center gap-4 bg-red-600 px-8 py-5 text-sm font-black uppercase tracking-[0.18em] transition hover:bg-red-500 md:px-10"
               >
                 Register Now
+
                 <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
               </motion.a>
+
             </div>
           </div>
+
         </div>
       </section>
        </main>
