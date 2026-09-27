@@ -1,16 +1,53 @@
-# React + Vite
+# GFG Marvel Event
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A cinematic Marvel-inspired event website designed for the GeeksForGeeks Student Chapter at Bennett University.
 
-Currently, two official plugins are available:
+## 🌐 Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://gfg-marvel-event-beta.vercel.app/
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Marvel-inspired cinematic interface
+- Interactive HUD-style elements
+- Animated Arc Reactor
+- Animated Spider-Man visual
+- Event information and highlights
+- Live countdown
+- Registration call-to-action
+- Responsive design for desktop and mobile
+- Smooth scrolling and interactive navigation
 
-## Expanding the Oxlint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- React
+- Vite
+- Tailwind CSS
+- Motion
+- Lucide React
+- JavaScript
+- HTML & CSS
+
+## 💡 Concept
+
+The website is designed as a futuristic mission interface inspired by the visual language of Marvel. It combines cinematic typography, HUD-style elements, glowing effects, animations and interactive navigation to make the event feel immersive rather than like a conventional college event page.
+
+## 📦 Resources & Assets
+
+- React + Vite
+- Tailwind CSS
+- Motion
+- Lucide React
+- Google Fonts
+- Custom visual assets
+- Custom animations and UI elements
+
+## 🚀 Development
+
+This project was created using React with Vite as the development and build tool.
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
